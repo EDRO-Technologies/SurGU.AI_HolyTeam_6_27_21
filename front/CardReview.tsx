@@ -9,15 +9,7 @@ interface CardReviewProps {
   current: number;
 }
 
-interface InputFieldProps {
-  id: keyof BusinessCard;
-  label: string;
-  value: string;
-  icon: React.ReactElement;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-const InputField: React.FC<InputFieldProps> = ({ id, label, value, icon, onChange }) => (
+const InputField = ({ id, label, value, icon, onChange }: { id: keyof BusinessCard, label: string, value: string, icon: React.ReactElement, onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
     <div>
         <label htmlFor={id} className="block text-sm font-medium text-base-content/80 mb-1">{label}</label>
         <div className="relative">

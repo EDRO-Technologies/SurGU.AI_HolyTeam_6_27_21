@@ -41,9 +41,7 @@ const CardView: React.FC<CardViewProps> = ({ card, onDelete, onUpdate }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [formData, setFormData] = useState<BusinessCard>(card);
 
-    // FIX: Corrected the type for the change event from a typo 'I nputElement' to 'HTMLInputElement'.
-    // This resolves a cascade of parsing errors.
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<I nputElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
