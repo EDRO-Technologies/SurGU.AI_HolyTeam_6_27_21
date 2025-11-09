@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Сканер визиток</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--primary)',
+              'primary-focus': 'var(--primary-focus)',
+              'primary-content': 'var(--primary-content)',
+              'base-100': 'var(--base-100)',
+              'base-200': 'var(--base-200)',
+              'base-300': 'var(--base-300)',
+              'base-content': 'var(--base-content)',
+            }
+          }
+        }
+      }
+    </script>
+     <style>
+      :root {
+        --primary: #6366f1; /* indigo-500 */
+        --primary-focus: #4f46e5; /* indigo-600 */
+        --primary-content: #ffffff;
+        --base-100: #ffffff;
+        --base-200: #f3f4f6; /* gray-100 */
+        --base-300: #e5e7eb; /* gray-200 */
+        --base-content: #1f2937; /* gray-800 */
+      }
+      body {
+        background-color: var(--base-200);
+        color: var(--base-content);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
